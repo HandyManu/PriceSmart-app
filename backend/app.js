@@ -20,6 +20,7 @@ const app = express();
 
 // Que acepte cookies
 app.use(cookieParser());
+app.use(express.json());
 
 // Definir las rutas de las funciones que tendrá la página web
 app.use("/api/products", validateAuthToken(["admin"]), productsRoutes);
